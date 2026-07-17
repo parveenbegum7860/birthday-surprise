@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hashu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff6fa5,#ff8fc8,#ffc2de);
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:300%;
+
+height:300%;
+
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.12),transparent 30%),
+radial-gradient(circle at 60% 80%,rgba(255,255,255,.15),transparent 30%);
+
+animation:bgMove 20s linear infinite;
+
+z-index:-3;
+
+}
+
+@keyframes bgMove{
+
+from{
+
+transform:translate(-10%,-10%) rotate(0deg);
+
+}
+
+to{
+
+transform:translate(-5%,-5%) rotate(360deg);
+
+}
+
+}
+
+.hearts{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:#ff4f8f;
+
+animation:floatHeart linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(100vh) scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+.container{
+
+width:95%;
+
+max-width:950px;
+
+padding:40px;
+
+text-align:center;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.title{
+
+font-family:'Pacifico',cursive;
+
+font-size:55px;
+
+color:#fff;
+
+text-shadow:0 0 25px hotpink;
+
+margin-bottom:20px;
+
+animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px hotpink;
+
+}
+
+to{
+
+text-shadow:0 0 35px deeppink;
+
+}
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+margin-bottom:35px;
+
+opacity:.95;
+
+}
+
+.gift-area{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:30px;
+
+margin-bottom:30px;
+
+}
+
+.gift{
+
+width:180px;
+
+height:180px;
+
+position:relative;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.box{
+
+position:absolute;
+
+bottom:0;
+
+width:180px;
+
+height:120px;
+
+background:#ff4f8f;
+
+border-radius:10px;
+
+box-shadow:0 12px 25px rgba(0,0,0,.3);
+
+}
+
+.lid{
+
+position:absolute;
+
+width:190px;
+
+height:40px;
+
+left:-5px;
+
+top:20px;
+
+background:#ff8cb5;
+
+border-radius:10px;
+
+transform-origin:left center;
+
+transition:1.2s;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+.ribbon-v{
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:20px;
+
+height:180px;
+
+background:white;
+
+}
+
+.ribbon-h{
+
+position:absolute;
+
+top:50px;
+
+width:180px;
+
+height:20px;
+
+background:white;
+
+}
+
+.bow{
+
+position:absolute;
+
+top:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:55px;
+
+}
+
+.tap{
+
+margin-top:20px;
+
+font-size:18px;
+
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.surprise{
+
+animation:fadeIn 2s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.slideshow{
+
+width:320px;
+
+height:420px;
+
+margin:30px auto;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+border:5px solid rgba(255,255,255,.4);
+
+}
+
+.slideshow img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:none;
+
+}
+
+.slideshow img.active{
+
+display:block;
+
+animation:zoom 6s linear;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.12);
+
+}
+
+}
+
+.message{
+
+font-size:22px;
+
+line-height:1.8;
+
+min-height:180px;
+
+padding:10px;
+
+}
+
+.signature{
+
+margin-top:30px;
+
+font-size:34px;
+
+font-family:'Pacifico',cursive;
+
+color:#fff;
+
+text-shadow:0 0 20px pink;
+
+}
+
+.controls{
+
+margin-top:30px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+button{
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff2d7a;
+
+font-size:17px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+canvas{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+pointer-events:none;
+
+z-index:100;
+
+}
+
+@media(max-width:768px){
+
+.title{
+
+font-size:40px;
+
+}
+
+.slideshow{
+
+width:260px;
+
+height:340px;
+
+}
+
+.message{
+
+font-size:18px;
+
+}
+
+.container{
+
+padding:25px;
+
+}
+
+.gift{
+
+transform:scale(.82);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<canvas id="confetti"></canvas>
+
+<div class="container">
+
+<h1 class="title">
+Happy Birthday Hashu ❤️
+</h1>
+
+<p class="subtitle">
+A special surprise made with lots of love...
+</p>
+
+<div id="giftSection">
+
+<div class="gift-area">
+
+<div class="gift" id="gift">
+
+<div class="lid"></div>
+
+<div class="box"></div>
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+<div class="bow">🎀</div>
+
+</div>
+
+</div>
+
+<div class="tap">
+🎁 Click the Gift to Open 🎁
+</div>
+
+</div>
+
+<div id="surprise" class="hidden">
+
+<div class="slideshow">
+
+<img src="photo1.jpg" class="active">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+<img src="photo4.jpg">
+
+</div>
+
+<div class="message">
+
+<span id="typewriter"></span>
+
+</div>
+
+<div class="signature">
+
+With Love ❤️<br>
+
+Cutoo & Bangu
+
+</div>
+
+<div class="controls">
+
+<button id="musicBtn">
+🎵 Play Music
+</button>
+
+<button onclick="location.reload()">
+🎁 Replay Surprise
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<audio id="bgMusic" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+/* ===========================
+   PART 2
+   Gift Animation + Hearts
+   =========================== */
+
+const gift = document.getElementById("gift");
+const giftSection = document.getElementById("giftSection");
+const surprise = document.getElementById("surprise");
+const lid = document.querySelector(".lid");
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+const slides = document.querySelectorAll(".slideshow img");
+const writer = document.getElementById("typewriter");
+
+/* --------------------------
+   Floating Hearts
+--------------------------- */
+
+const heartContainer = document.getElementById("hearts");
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["❤","💖","💕","💗","💓","💞"][Math.floor(Math.random()*6)];
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.fontSize=(15+Math.random()*35)+"px";
+
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+
+heart.style.animationDelay=Math.random()*2+"s";
+
+heartContainer.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},12000);
+
+}
+
+setInterval(createHeart,300);
+
+/* --------------------------
+   Gift Opening
+--------------------------- */
+
+gift.addEventListener("click",()=>{
+
+gift.style.pointerEvents="none";
+
+/* Open Lid */
+
+lid.style.transform="rotate(-130deg) translateY(-20px)";
+
+gift.style.transform="translateY(-15px) scale(1.05)";
+
+setTimeout(()=>{
+
+giftSection.classList.add("hidden");
+
+surprise.classList.remove("hidden");
+
+surprise.classList.add("surprise");
+
+startTypewriter();
+
+startSlideshow();
+
+startConfetti();
+
+},1500);
+
+});
+
+/* --------------------------
+   Background Music
+--------------------------- */
+
+musicBtn.addEventListener("click",()=>{
+
+if(music.paused){
+
+music.play();
+
+musicBtn.innerHTML="⏸ Pause Music";
+
+}else{
+
+music.pause();
+
+musicBtn.innerHTML="🎵 Play Music";
+
+}
+
+});
+
+/* --------------------------
+   Typewriter Message
+--------------------------- */
+
+const text=`
+
+Happy Birthday My Dear Hashu ❤️
+
+Today is not just your birthday...
+it's the day the world became brighter.
+
+Every smile of yours is precious.
+
+Every moment with you is special.
+
+May your dreams come true,
+your heart always stay happy,
+and your life always be filled
+with love, laughter and success.
+
+Thank you for being such
+an amazing person.
+
+No matter how much time passes,
+you will always have a special place
+in our hearts.
+
+Once Again...
+
+Happy Birthday Hashu ❤️🎂
+
+With endless love,
+
+Cutoo ❤️ & Bangu ❤️
+
+`;
+
+let index=0;
+
+function startTypewriter(){
+
+writer.innerHTML="";
+
+index=0;
+
+type();
+
+}
+
+function type(){
+
+if(index<text.length){
+
+writer.innerHTML+=text.charAt(index);
+
+index++;
+
+setTimeout(type,40);
+
+}
+
+}
+
+/* --------------------------
+   Slideshow
+--------------------------- */
+
+let currentSlide=0;
+
+function startSlideshow(){
+
+setInterval(()=>{
+
+slides[currentSlide].classList.remove("active");
+
+currentSlide++;
+
+if(currentSlide>=slides.length){
+
+currentSlide=0;
+
+}
+
+slides[currentSlide].classList.add("active");
+
+},3500);
+
+}
+
+/* ===========================
+   PART 3
+   Premium Confetti Animation
+   =========================== */
+
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const particles = [];
+
+function randomColor() {
+    const colors = [
+        "#ff4d6d",
+        "#ffd166",
+        "#06d6a0",
+        "#118ab2",
+        "#ffffff",
+        "#ff85a2",
+        "#f72585",
+        "#b5179e"
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function startConfetti() {
+
+    particles.length = 0;
+
+    for (let i = 0; i < 300; i++) {
+
+        particles.push({
+
+            x: Math.random() * canvas.width,
+
+            y: Math.random() * canvas.height - canvas.height,
+
+            r: Math.random() * 7 + 3,
+
+            dx: (Math.random() - 0.5) * 6,
+
+            dy: Math.random() * 5 + 2,
+
+            color: randomColor(),
+
+            tilt: Math.random() * 10,
+
+            rotate: Math.random() * 360
+
+        });
+
+    }
+
+    animateConfetti();
+
+}
+
+function animateConfetti() {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p) => {
+
+        ctx.save();
+
+        ctx.translate(p.x, p.y);
+
+        ctx.rotate(p.rotate * Math.PI / 180);
+
+        ctx.fillStyle = p.color;
+
+        ctx.fillRect(-p.r / 2, -p.r / 2, p.r, p.r * 1.8);
+
+        ctx.restore();
+
+        p.x += p.dx;
+        p.y += p.dy;
+        p.rotate += 4;
+
+        if (p.y > canvas.height + 20) {
+            p.y = -20;
+            p.x = Math.random() * canvas.width;
+        }
+
+    });
+
+    requestAnimationFrame(animateConfetti);
+
+}
+
+</script>
+
+</body>
+</html>
